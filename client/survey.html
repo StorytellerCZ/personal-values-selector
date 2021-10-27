@@ -1,0 +1,26 @@
+<template name="survey">
+  <h1>{{ formatMessage 'survey.title' }}</h1>
+  <p>{{ formatMessage 'survey.explained' }}</p>
+  <progress class="surveyProgress" max="{{totalValues}}" value="{{currentStep}}">{{currentStep}}</progress>
+  {{#each value in values}}
+    {{>valuesRanker value=value values=values }}
+  {{/each}}
+  <div class="surveyNavButtons">
+    <div>
+      {{#unless isStart}}
+        <button class="previous">{{ formatMessage 'previous' }}</button>
+      {{/unless}}
+    </div>
+    <div>
+      {{#if isEnd}}
+        <button class="finish">{{ formatMessage 'survey.button.finish' }}</button>
+      {{else}}
+        <button class="next">{{ formatMessage 'next' }}</button>
+      {{/if}}
+    </div>
+  </div>
+  <div>
+    <button class="reset">{{ formatMessage 'reset' }}</button>
+    <button class="finish">{{ formatMessage 'survey.finish' }}</button>
+  </div>
+</template>

@@ -1,0 +1,18 @@
+<template name="valuesRanker">
+  <div id="{{value._id}}" class="valueRankerDesc {{ isShown }}">
+    <h3>{{formatMessage intlName}}</h3>
+    <p>{{formatMessage intlDesc}}</p>
+    <div class="valueRankerSelect">
+      <button class="valueRankerBtn {{#if isRankSelected 1}}selected{{/if}}" value="1">{{formatMessage 'survey.scale.least'}}</button>
+      <button class="valueRankerBtn {{#if isRankSelected 2}}selected{{/if}}" value="2">{{formatNumber 2}}</button>
+      <button class="valueRankerBtn {{#if isRankSelected 3}}selected{{/if}}" value="3">{{formatNumber 3}}</button>
+      <button class="valueRankerBtn {{#if isRankSelected 4}}selected{{/if}}" value="4">{{formatNumber 4}}</button>
+      <button class="valueRankerBtn {{#if isRankSelected 5}}selected{{/if}}" value="5">{{formatNumber 5}}</button>
+      <button class="valueRankerBtn {{#if isRankSelected 6}}selected{{/if}}" value="6">{{formatNumber 6}}</button>
+      <button class="valueRankerBtn {{#if isRankSelected 7}}selected{{/if}}" value="7">{{formatNumber 7}}</button>
+      <button class="valueRankerBtn {{#if isRankSelected 8}}selected{{/if}}" value="8">{{formatNumber 8}}</button>
+      <button class="valueRankerBtn {{#if isRankSelected 9}}selected{{/if}}" value="9">{{formatNumber 9}}</button>
+      <button class="valueRankerBtn {{#if isRankSelected 10}}selected{{/if}}" value="10">{{formatMessage 'survey.scale.most'}}</button>
+    </div>
+  </div>
+</template>

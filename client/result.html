@@ -1,0 +1,53 @@
+<template name="result">
+  <article>
+    <header>
+      {{#if result.name}}
+        <h1>{{result.name}}</h1>
+      {{else}}
+        <h1>{{formatMessage 'result.defaultHeading'}}</h1>
+      {{/if}}
+      {{#if isOwner}}
+        {{> sharing resultId=result._id}}
+      {{/if}}
+    </header>
+    <section class="result">
+      <h3>{{formatMessage 'values.category.primary'}}</h3>
+      {{#if isOwner}}
+        <h6>{{ formatMessage 'result.maxPerCategory' '' (intlValuesObject 3) }}</h6>
+      {{/if}}
+      {{> resultItems listClass='listPrimary' items=result.primary isOwner=isOwner category='primary' resultId=result._id }}
+    </section>
+    <section class="result">
+      <h3>{{formatMessage 'values.category.strive'}}</h3>
+      {{#if isOwner}}
+        <h6>{{ formatMessage 'result.maxPerCategory' '' (intlValuesObject 6) }}</h6>
+      {{/if}}
+      {{> resultItems listClass='listSmall strive' items=result.strive isOwner=isOwner category='strive' resultId=result._id }}
+    </section>
+    <section class="result">
+      <h3>{{formatMessage 'values.category.vibe'}}</h3>
+      {{#if isOwner}}
+        <h6>{{ formatMessage 'result.maxPerCategory' '' (intlValuesObject 6) }}</h6>
+      {{/if}}
+      {{> resultItems listClass='listSmall vibe' items=result.vibe isOwner=isOwner category='vibe' resultId=result._id }}
+    </section>
+    <section class="result">
+      <h3>{{formatMessage 'values.category.respectable'}}</h3>
+      {{#if isOwner}}
+        <h6>{{ formatMessage 'result.maxPerCategory' '' (intlValuesObject 12) }}</h6>
+      {{/if}}
+      {{> resultItems listClass='listBig respectable' items=result.respectable isOwner=isOwner category='respectable' resultId=result._id }}
+    </section>
+    <section class="result">
+      <h3>{{formatMessage 'values.category.neutral'}}</h3>
+      {{#if isOwner}}
+        <h6>{{ formatMessage 'result.maxPerCategory' '' (intlValuesObject 18) }}</h6>
+      {{/if}}
+      {{> resultItems listClass='listBig neutral' items=result.neutral isOwner=isOwner category='neutral' resultId=result._id }}
+    </section>
+    <section class="result">
+      <h3>{{formatMessage 'values.category.overrated'}}</h3>
+      {{> resultItems listClass='listBig overrated' items=result.overrated isOwner=isOwner category='overrated' resultId=result._id }}
+    </section>
+  </article>
+</template>

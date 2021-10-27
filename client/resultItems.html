@@ -1,0 +1,19 @@
+<template name="resultItems">
+  <div class="{{listClass}}">
+    {{#each item in items}}
+      <div class="value">
+        {{#with item}}
+          <div title="{{formatMessage intlDesc}}">
+            {{formatMessage intlValueName }}
+          </div>
+        {{/with}}
+        {{#if isOwner}}
+          <div class="actionButtons">
+            {{#unless isTopCategory}}<button class="up" data-id="{{item}}">⬆️</button>{{/unless}}
+            {{#unless isLastCategory}}<button class="down" data-id="{{item}}">⬇️</button>{{/unless}}
+          </div>
+        {{/if}}
+      </div>
+    {{/each}}
+  </div>
+</template>

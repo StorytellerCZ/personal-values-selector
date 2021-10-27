@@ -1,0 +1,173 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #eee;
+}
+
+nav {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #0070c0;
+  color: white;
+}
+
+#title {
+  padding-left: 1rem;
+  font-weight: bolder;
+}
+
+nav a {
+  padding: 1rem;
+}
+
+nav a:hover, nav a.active {
+  background-color: blueviolet;
+  color: white;
+}
+
+nav a:visited {
+  color: white;
+}
+
+main {
+  padding: 1em;
+}
+
+footer {
+  padding: 1em;
+}
+
+.valueRankerDesc {
+  text-align: center;
+  padding: 1rem 0;
+  display: none;
+}
+
+.valueRankerDesc.show {
+  display: block !important;
+}
+
+.valueRankerSelect {
+  display: flex;
+  justify-content: center;
+}
+
+button.valueRankerBtn {
+  border-radius: 0;
+  margin: 0 10px;
+  padding: 0.5rem;
+}
+
+button.valueRankerBtn:hover, button.valueRankerBtn.selected {
+  background-color: blueviolet;
+  color: white;
+  cursor: pointer;
+}
+
+.surveyNavButtons {
+  display: flex;
+  justify-content: space-between;
+}
+
+progress.surveyProgress {
+  width: 100%;
+}
+
+progress.surveyProgress[value] {
+  height: 20px;
+  appearance: none;
+}
+
+section.result {
+  text-align: center;
+}
+
+section.result .listPrimary {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.listPrimary .value {
+  flex: 1 0 30%;
+}
+
+section.result .value {
+  min-width: 120px;
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+
+section.result .listPrimary .value {
+  background-color: #0070c0;
+  color: yellow;
+  min-width: 150px;
+}
+
+section.result .strive .value {
+  background-color: #00b050;
+}
+
+section.result .vibe .value {
+  background-color: #92d050;
+}
+
+section.result .respectable .value {
+  background-color: yellow;
+}
+
+section.result .neutral .value {
+  background-color: orange;
+}
+
+section.result .overrated .value {
+  background-color: red;
+}
+
+section.result .value .actionButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+}
+
+section.result .listSmall {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.listSmall .value {
+  flex: 1 0 16%;
+}
+
+section.result .listBig {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.listBig .value {
+  flex: 1 0 10%;
+}
+
+section.result .value {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3em;
+}
+
+.actionButtons {
+  margin-left: 10px;
+}
+
+.actionButtons button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}

@@ -1,0 +1,39 @@
+<template name="sharing">
+  {{formatMessage 'sharing.title'}}
+  <ul class="sharing">
+    {{#unless isDesktop}}<li><a href="sms:SMS?&body={{formatMessage 'sharing.textIntro'}} {{url}}">SMS</a></li>{{/unless}}
+    <li>
+      <a href="mailto:?subject={{title}}&body={{text}} {{url}}">E-mail</a>
+    </li>
+    <li>
+      <a href="http://www.facebook.com/dialog/send?&display=popup&href={{encodedUrl}}&link={{encodedUrl}}&redirect_uri={{encodedUrl}}&quote=${{title}}" target='_blank' rel='noreferrer noopener'>
+        Facebook Messenger
+      </a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{encodedUrl}}&quote={{title}}`" target='_blank' rel='noreferrer noopener'>Facebook</a>
+    </li>
+    <li>
+      <a href="http://twitter.com/share?text={{title}}&url={{url}}" target='_blank' rel='noreferrer noopener'>Twitter</a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&url={{url}}&title={{title}}&summary={{text}}" target='_blank' rel='noreferrer noopener'>LinkedIn</a>
+    </li>
+
+    <li>
+      <a href="https://social-plugins.line.me/lineit/share?url={{encodedUrl}}&text={{text}}" target='_blank' rel='noreferrer noopener'>LINE</a>
+    </li>
+    <li>
+      <a href="https://gab.com/compose?url={{encodedUrl}}&text={{text}}" target='_blank' rel='noreferrer noopener'>Gab</a>
+    </li>
+    <li>
+      <a href="http://www.reddit.com/submit?url={{encodedUrl}}&title={{title}}" target='_blank' rel='noreferrer noopener'>Reddit</a>
+    </li>
+    <li>
+      <a href="https://mastodon.social/share?url={{encodedUrl}}&text={{text}}" target='_blank' rel='noreferrer noopener'>Mastodon Social</a>
+    </li>
+    <li>
+      <a href="https://mstdn.jp/share?url={{encodedUrl}}&text={{text}}" target='_blank' rel='noreferrer noopener'>Mastodon Japan</a>
+    </li>
+  </ul>
+</template>
